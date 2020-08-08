@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+//    mavenCentral()
+    maven {
+        name "company"
+        url "http://maven.pdd.net/repository/maven-public/"
+    }
+}
+
+ext {
+    lombokVersion = '1.16.16'
+    jodaTimeVersion = '2.7'
+    velocityVersion = '1.7'
+    prestoVersion = '0.220'
+}
+
+dependencies {
+
+    compile ("org.projectlombok:lombok:$lombokVersion")
+    compile "joda-time:joda-time:$jodaTimeVersion"
+    compile "org.apache.velocity:velocity:$velocityVersion"
+    compile "org.apache.velocity:velocity-tools:2.0"
+    compile "com.facebook.presto:presto-parser:$prestoVersion"
+    
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
