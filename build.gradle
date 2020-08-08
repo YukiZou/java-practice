@@ -6,11 +6,7 @@ group 'org.example'
 version '1.0-SNAPSHOT'
 
 repositories {
-//    mavenCentral()
-    maven {
-        name "company"
-        url "http://maven.pdd.net/repository/maven-public/"
-    }
+    mavenCentral()
 }
 
 ext {
